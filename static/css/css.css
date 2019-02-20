@@ -1,0 +1,86 @@
+.site-description {
+        display: none;
+    }
+
+    #atmsAlertOverlay {
+        display: none;
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, .4);
+        animation: ngdialog-fadein .5s;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #atmsAlert {
+        z-index: 9999;
+        border-radius: 3px;
+        padding: 0;
+        background: #FFF;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        width: 650px;
+        margin: 0 auto;
+        position: absolute;
+        max-width: 90%;
+    }
+
+    #atmsAlert .content {
+        font-size: .9rem;
+        padding: 1rem 2rem 4rem;
+    }
+
+    #atmsAlert button {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    #atmsAlert h1 {
+        border-bottom: 3px solid #de4326;
+        color: #231f20 !important;
+        padding: 1rem 1rem 1rem 2rem;
+        margin: 0;
+        border-radius: 3px 3px 0 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    #atmsAlertX {
+        top: 0;
+        right: 0 !important;
+        border: 0;
+        bottom: auto !important;
+        font-size: .8rem;
+        background: none;
+        font-weight: 600;
+        padding: 1.3rem 2rem;
+    }
+
+    @media all and (max-height: 700px) {
+        #atmsAlertOverlay {
+            overflow: scroll;
+            padding-top: 2rem;
+            align-items: flex-start;
+        }
+
+        #atmsAlert {
+            margin-bottom: 2rem;
+        }
+    }
+    #formLine13 > div{
+        background:black;
+        color : white;
+        padding : 5px;
+        padding-bottom:40px;
+    }
+
+    .wordwrap {
+        white-space: pre-wrap;      /* CSS3 */
+        white-space: -moz-pre-wrap; /* Firefox */
+        white-space: -pre-wrap;     /* Opera <7 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        word-wrap: break-word;      /* IE */
+    }
