@@ -2088,6 +2088,7 @@
                     if (!r()) {
                         var i = this.formDataProcess();
                         document.getElementById('resultUrl').innerHTML = "https://search.ipaustralia.gov.au/trademarks/search/advanced?" + i;
+                        document.getElementById('resultUrl').href = "https://search.ipaustralia.gov.au/trademarks/search/advanced?" + i;
                         i !== this.lastUrl && this.countService.countAdvanced(i).then(function(a) {
                             r() || (null !== a.count ? e.formDataProcess() === i ? (t.resultCount = t.notChangedDefault() ? null : a.count, t.lastUrl = i, t.countError = null, n.element(document.querySelectorAll(".form-line.error-message")).removeClass("with-message"), n.element(document.querySelectorAll(".form-line.field .form-col")).removeClass("with-error")) : t.updateCount() : (t.resultCount = null, t.lastUrl = i, t.countError = a.errors[0]))
                         }, function(e) {

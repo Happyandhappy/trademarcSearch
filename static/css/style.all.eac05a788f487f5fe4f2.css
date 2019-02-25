@@ -3120,19 +3120,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%; }
 
-header {
-  background: #FFF;
-  padding: 1rem;
-  margin: 10px auto 25px auto !important; }
-  header .logo img {
-    margin: 10px 0 0 0;
-    vertical-align: middle; }
-  header .logo a.release-notes {
-    line-height: 5rem;
-    cursor: pointer; }
-    header .logo a.release-notes, header .logo a.release-notes:visited, header .logo a.release-notes:link, header .logo a.release-notes:hover {
-      color: #738ca2; }
-
 .content-header {
   border-bottom: 3px solid #DE4326;
   background: #0D252C;
