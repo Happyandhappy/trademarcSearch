@@ -70,19 +70,26 @@
             margin-bottom: 2rem;
         }
     }
-    #formLine13 > div{
+    #formLine13 > div, #formLine14 > div, #formLine15 > div{
         background:black;
         color : white;
         padding : 5px;
         padding-bottom:40px;
     }
 
+    #formLine14 > div, #formLine15 > div{
+        margin-top: 10px;
+    }
+
+    #formLine15 > div{
+        max-height:300px;
+        overflow-y:scroll;
+    }
+
     .wordwrap {
+        white-space: pre-wrap;      /* CSS3 */
         white-space: -moz-pre-wrap; /* Firefox */
         white-space: -pre-wrap;     /* Opera <7 */
         white-space: -o-pre-wrap;   /* Opera 7 */
         word-wrap: break-word;      /* IE */
-    }
-    .result{
-        color:white;
     }

@@ -1977,12 +1977,29 @@
             }, e.prototype.submitSearch = function(e) {
                 var t = this;
                 e.preventDefault();
-                console.log("here");
+
                 l.Analytics.recordEvent("Search", "submit advanced"), this.hasImage && l.Analytics.recordEvent("Search", "submit advanced with image");
                 var n = document.getElementById("image_id").value.length;
-                if (u.BaseSearchFormCtrl.restoreOriginalSegment(), this.notChangedDefault() && 0 === n) e.preventDefault(), this.m.showMessage("INFO_NO_SEARCH_CRITERIA");
+                if (u.BaseSearchFormCtrl.restoreOriginalSegment(), this.notChangedDefault() && 0 === n)
+                    e.preventDefault(), this.m.showMessage("INFO_NO_SEARCH_CRITERIA");
                 else {
-                    if (0 === this.resultCount && 0 === n) return e.preventDefault(), this.m.showMessage("INFO_ZERO_RESULTS"), !1;
+                     console.log("submit here");
+                     console.log($('#resultUrl').attr('href'))
+                    $.ajax({
+                        url : "/getCountofResult",
+                        method : 'POST',
+                        data : {"url" : $('#resultUrl').attr('href')},
+                        success: function(res){
+                           var resdt = JSON.parse(res);
+                            $('#Count').text("Results : " + resdt.data.count);
+                            var text = "";
+                            for (var i = 0 ; i < resdt.trademarks.length ; i++){
+                                text += resdt.trademarks[i] + '<br>';
+                            }
+                            $('#TradeIds').html(text);
+                        }
+                    });
+                    /*if (0 === this.resultCount && 0 === n) return e.preventDefault(), this.m.showMessage("INFO_ZERO_RESULTS"), !1;
                     if (null !== this.countError) e.preventDefault(), this.displayCountError(this.countError);
                     else {
                         var r = this.validations.getErrors();
@@ -1990,7 +2007,7 @@
                         e.preventDefault(), r.forEach(function(e) {
                             t.m.showMessage(e.message)
                         })
-                    }
+                    }*/
                 }
                 return e.preventDefault(), !1
             }, e.prototype.setAssociatedClasses = function() {
@@ -2672,11 +2689,6 @@
         }
         k && 0 === k.length && (k = String((new Date).getTime()));
         var M = {};
-        try {
-            M[document.querySelector("meta[name='_csrf_header']").getAttribute("content")] = document.querySelector("meta[name='_csrf']").getAttribute("content")
-        } catch (e) {
-            console.warn("No CSRF Header...")
-        }
         var C = function(e, t, r, i) {
                 e.defaults.headers.patch = M, e.defaults.headers.post = M, e.defaults.headers.put = M, e.defaults.headers.delete = M, t.setDefaults({
                     vn: "?v=" + k,

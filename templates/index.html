@@ -4,14 +4,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Australian Trade Mark Search is the Australian Government’s trade mark search system.">
-    <link rel="icon" type="image/png" href="static/images/favicon.png" />
     <meta charset="UTF-8" />
     <meta name="_system_version" content="" />
     <title>IP Australia | Trade Mark Search</title>
     <link href="static/css/style.all.eac05a788f487f5fe4f2.css" rel="stylesheet">
     <link href="static/css/css.css" rel="stylesheet">
 </head>
-
 <body>
     <i data-fa-symbol="fa-caret-circle-down" class="far fa-caret-circle-down"></i>
     <i data-fa-symbol="fa-caret-circle-up" class="far fa-caret-circle-up"></i>
@@ -98,6 +96,7 @@
         r('/trademarks');
     });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/build.eac05a788f487f5fe4f2.js"></script>
     <div class="site-description">
         <h1>Australian Trade Mark Search</h1>
@@ -162,7 +161,7 @@
         }
     });
     </script>
-    <header class="">
+    <header class="row cf no-padding fix-max-width no-print hidden">
     </header>
     <div id="pageContent" class="cf">
         <div ng-controller="searchFormCtrl" class="page-container advanced-search search-form">
@@ -1727,8 +1726,24 @@
                                     <div class="form-line-group" id="formLine13">
                                         <div class="col c-100 form-line label">
                                             <div class="col c-100 no-padding">
-                                                <div class="wordwrap">
-                                                    <a href="#" class="result" id="resultUrl"  target="_blank">https://search.ipaustralia.gov.au/trademarks/search/advanced?attorney=&c=&classList=&ct=A&dateType=LODGEMENT_DATE&endo=&fromDate=&gsd=&i=&ia=&idList=&ieOp[0]=AND&ieOp[1]=AND&ir=&irOp=AND&it[0]=PART&it[1]=PART&it[2]=PART&it[3]=PART&iv[0]=&iv[1]=&iv[2]=&iv[3]=&nameField[0]=OWNER&name[0]=&oAcn=&originalSegment=&publicationFromDate=&publicationToDate=&status=&toDate=&weOp[0]=AND&weOp[1]=AND&wp=&wrOp=AND&wt[0]=PART&wt[1]=PART&wt[2]=PART&wt[3]=PART&wv[0]=STRING&wv[1]=&wv[2]=&wv[3]=</a>
+                                                <a class="wordwrap" for="trademarkIds" aria-hidden="true" id="resultUrl" target="_blank">
+                                                    https://search.ipaustralia.gov.au/trademarks/search/advanced?attorney=&c=&classList=&ct=A&dateType=LODGEMENT_DATE&endo=&fromDate=&gsd=&i=&ia=&idList=&ieOp[0]=AND&ieOp[1]=AND&ir=&irOp=AND&it[0]=PART&it[1]=PART&it[2]=PART&it[3]=PART&iv[0]=&iv[1]=&iv[2]=&iv[3]=&nameField[0]=OWNER&name[0]=&oAcn=&originalSegment=&publicationFromDate=&publicationToDate=&status=&toDate=&weOp[0]=AND&weOp[1]=AND&wp=&wrOp=AND&wt[0]=PART&wt[1]=PART&wt[2]=PART&wt[3]=PART&wv[0]=STRING&wv[1]=&wv[2]=&wv[3]=
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-line-group" id="formLine14">
+                                        <div class="col c-100 form-line label">
+                                            <div class="col c-100 no-padding">
+                                                <div class="wordwrap" for="trademarkIds" aria-hidden="true" id="Count">result : 0
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-line-group" id="formLine15">
+                                        <div class="col c-100 form-line label">
+                                            <div class="col c-100 no-padding">
+                                                <div class="wordwrap" for="trademarkIds" aria-hidden="true" id="TradeIds">
                                                 </div>
                                             </div>
                                         </div>
