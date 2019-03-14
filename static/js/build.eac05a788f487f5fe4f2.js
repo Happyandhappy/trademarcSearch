@@ -1928,6 +1928,9 @@
             }, e.prototype.clearWordAndImage = function(e) {
                 this.clearImage(!1, !0), this.clearWord(!1, !0), !0 === e && this.updateCount()
             }, e.prototype.clearSearchForm = function() {
+                $('#Count').text('');
+                $('#TradeIds').text('');
+
                 this.clearWordAndImage();
                 var e = document.querySelectorAll('input[type="text"]');
                 r.each(e, function(e) {

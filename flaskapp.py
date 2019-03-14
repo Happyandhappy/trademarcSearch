@@ -93,7 +93,7 @@ def scrap(url, Count):
     rest = sess.post(url='https://search.ipaustralia.gov.au/trademarks/search/doSearch', data=data)
     tradeMarkIds = getTrademarksfromHtml(rest.text)
     URL = rest.url
-    for page in range(1, int(Count/100)):
+    for page in range(1, int(Count/100)+1):
         res = sess.get("%s&p=%s" % (URL, page))
         tradeMarkIds = tradeMarkIds + getTrademarksfromHtml(res.text)
     return tradeMarkIds
