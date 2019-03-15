@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html ng-app="ipa" lang="en" ng-strict-di>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/trademarks/static/images/favicon.png"/>
+    <meta charset="UTF-8" />
+    <meta name="_system_version" content="" />
+    <meta name="_csrf_parameter" content="_csrf" />
+    <meta name="_csrf_header" content="X-XSRF-TOKEN" />
+    <meta name="_csrf" content="f1bedb9f-8da3-4d21-9a0d-2f5e15720016" />
+    <title>My Searches | IP Australia | Trade Mark Search</title>
+    <link href="static/css/style.all.css" rel="stylesheet" />
+    <link href="static/css/css.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <i data-fa-symbol="fa-caret-circle-down" class="far fa-caret-circle-down"></i>
+    <i data-fa-symbol="fa-caret-circle-up" class="far fa-caret-circle-up"></i>
+    <i data-fa-symbol="fa-flag" class="far fa-flag"></i>
+    <i data-fa-symbol="fa-star" class="far fa-star"></i>
+    <i data-fa-symbol="fa-star-solid" class="fas fa-star"></i>
+    <i data-fa-symbol="fa-bell" class="far fa-bell"></i>
+    <i data-fa-symbol="fa-bell-solid" class="fas fa-bell"></i>
+    <i data-fa-symbol="fa-list-ol" class="far fa-list-ol"></i>
+    <i data-fa-symbol="fa-bars" class="far fa-bars"></i>
+    <i data-fa-symbol="fa-download" class="far fa-download"></i>
+    <i data-fa-symbol="fa-external-link" class="far fa-external-link"></i>
+    <i data-fa-symbol="fa-save" class="far fa-save"></i>
+    <i data-fa-symbol="fa-sign-out" class="far fa-sign-out"></i>
+    <i data-fa-symbol="fa-sign-in" class="far fa-sign-in"></i>
+    <i data-fa-symbol="fa-calendar" class="far fa-calendar"></i>
+    <i data-fa-symbol="fa-times-circle" class="far fa-times-circle"></i>
+    <i data-fa-symbol="fa-cog" class="far fa-cog"></i>
+    <i data-fa-symbol="fa-rocket" class="far fa-rocket"></i>
+    <i data-fa-symbol="fa-square" class="far fa-square"></i>
+    <i data-fa-symbol="fa-check-square" class="far fa-check-square"></i>
+    <i data-fa-symbol="fa-pencil" class="far fa-pencil"></i>
+    <i data-fa-symbol="fa-plus" class="far fa-plus"></i>
+    <i data-fa-symbol="fa-minus" class="far fa-minus"></i>
+    <i data-fa-symbol="fa-trash" class="far fa-trash"></i>
+    <i data-fa-symbol="fa-recycle" class="far fa-recycle"></i>
+    <i data-fa-symbol="fa-sort" class="far fa-sort"></i>
+    <i data-fa-symbol="fa-sort-up" class="far fa-sort-up"></i>
+    <i data-fa-symbol="fa-sort-down" class="far fa-sort-down"></i>
+    <i data-fa-symbol="fa-binoculars" class="far fa-binoculars"></i>
+    <i data-fa-symbol="fa-frown" class="far fa-frown"></i>
+    <i data-fa-symbol="fa-info-circle" class="far fa-info-circle"></i>
+    <i data-fa-symbol="fa-exclamation-triangle" class="far fa-exclamation-triangle"></i>
+    <i data-fa-symbol="fa-times" class="far fa-times"></i>
+    <i data-fa-symbol="fa-external-link" class="far fa-external-link"></i>
+    <i data-fa-symbol="fa-question-circle" class="far fa-question-circle"></i>
+    <script>
+      window.addToVars = function(data) {
+        window.VARS = window.VARS ? window.VARS : {};
+        for (var p in data) {
+          if (data.hasOwnProperty(p)) {
+            window.VARS[p] = data[p];
+          }
+        }
+      };
+      window.getVar = function(varName) {
+        return window.VARS[varName];
+      };
+      window.r = function(url) {
+        var dm = false;
+        var x = document.cookie.split(";");
+        for (var k = 0; k < x.length; k++) {
+          var m = x[k].split("=");
+          if (
+            m[0]
+              .trim()
+              .toLowerCase()
+              .indexOf("_fullmobile") > -1 &&
+            m[1].toLowerCase() === "true"
+          ) {
+            dm = true;
+          }
+        }
+        if (!dm) {
+          var ua = navigator.userAgent || navigator.vendor || window.opera;
+          if (
+            /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
+              ua
+            ) ||
+            /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+              ua.substr(0, 4)
+            )
+          ) {
+            var s = window.location.pathname.split("/").filter(function(el) {
+              return el.length !== 0;
+            });
+            if (s.indexOf("mobile") === -1) {
+              if (s.indexOf("view") > -1 && s[s.indexOf("view") + 1]) {
+                window.location =
+                  url + "/mobile/view/" + s[s.indexOf("view") + 1];
+              } else if (s.indexOf("result") > -1 && window.location.search) {
+                window.location =
+                  url + "/mobile/result" + window.location.search;
+              } else if (
+                (s.indexOf("help") > -1 && s[s.length - 1]) ||
+                s.indexOf("about") > -1 ||
+                s.indexOf("disclaimer") > -1
+              ) {
+                window.location = url + "/mobile/" + s[s.length - 1];
+              } else {
+                window.location = url + "/mobile/search";
+              }
+            }
+          }
+        }
+      };
+      window.addEventListener("load", function() {
+        r("/trademarks");
+      });
+    </script>
+    <script type="text/javascript" src="static/js/build.f8c5cbd11e86a11b77b7.js"></script>
+    <div class="site-description">
+      <h1>Australian Trade Mark Search</h1>
+      <p>
+        Australian Trade Mark Search is the Australian Government’s trade mark
+        search system.
+      </p>
+    </div>
+    <div class="print-only print-block row cf">
+      <div class="col c-100 no-padding" style="padding: .5cm 0 !important;">
+        <img style="height: 1.5cm" src="/trademarks/static/images/logo_sm.png" alt="Australian Government IP Australia"/>
+      </div>
+    </div>
+    <div id="atmsAlertOverlay">
+      <div id="atmsAlert">
+        <button id="atmsAlertX">X</button>
+        <button id="atmsAlertClose" class="green fill">Dismiss</button>
+        <h1>New version of Australian Trade Mark Search</h1>
+        <div class="content">
+          <p>IP Australia’s upgrade to trade mark systems is now complete.</p>
+          <p>This is the new version of Australian Trade Mark Search.</p>
+          <p>
+            For information about the changes to Australian Trade Mark Search:
+            <a href="https://www.ipaustralia.gov.au/about-us/about-this-site/system-availability/rio-release" target="_blank">click here</a>.
+          </p>
+          <p>
+            Please also refer to the system’s
+            <a href="https://search.ipaustralia.gov.au/trademarks/help" target="_blank">Help</a>
+            for updated information about search functionality, including more
+            detailed Release Notes.
+          </p>
+          <p>
+            The upgrade included the largest ever data migration in IP
+            Australia’s history with hundreds of millions of records migrated to
+            a new system. Please see the system’s
+            <a href="https://search.ipaustralia.gov.au/trademarks/about" target="_blank">About page</a>
+            for more information, including the updated Quality Declaration in
+            relation to data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function hasCookie(k) {
+        var c = document.cookie.split(";");
+        for (var i = 0; i < c.length; i++) {
+          if (c[i].trim() === k) return true;
+        }
+        return false;
+      }
+      window.addEventListener("load", function() {
+        if (!hasCookie("atms_seen_alert_2=TRUE")) {
+          var e = document.getElementById("atmsAlert");
+          if (e) {
+            document.getElementById("atmsAlertOverlay").style.display = "flex";
+            setTimeout(function() {
+              var closePopup = function() {
+                e.style.display = "none";
+                document.getElementById("atmsAlertOverlay").style.display =
+                  "none";
+                var d = new Date();
+                d.setTime(d.getTime() + 100 * 24 * 60 * 60 * 1000);
+                document.cookie =
+                  "atms_seen_alert_2=TRUE; path=/; expires=" + d.toUTCString();
+              };
+              document
+                .getElementById("atmsAlertX")
+                .addEventListener("click", closePopup);
+              document
+                .getElementById("atmsAlertClose")
+                .addEventListener("click", closePopup);
+              document
+                .getElementById("atmsAlertOverlay")
+                .addEventListener("click", closePopup);
+            }, 100);
+          }
+        }
+      });
+    </script>
+    <header class="row cf no-padding fix-max-width no-print hidden">
+    </header>
+    <div id="pageContent" class="cf">
+      <div ng-controller="searchRecordCtrl" class="page-container search-results records-list">
+        <div class="row cf content-header no-print" ng-controller="topBarCtrl">
+          <div class="col c-100 no-padding">
+            <div class="row cf fix-max-width no-padding">
+              <div role="list" class="col c-45 user-buttons nav breadcrumb no-padding-right">
+                <span role="listitem">
+                  <a href="/trademarks" class="breadcrumb home" title="Home">
+                    <span class="sr-only">Home</span>
+                    <i aria-hidden="true" class="ipa-icon home-t"></i>
+                  </a>
+                </span>
+                <span role="listitem">
+                  <a class="breadcrumb" href="/trademarks/search/advanced">Advanced search</a></span>
+                <span role="listitem">
+                  <span class="breadcrumb current">My searches</span>
+                </span>
+              </div>
+              <div class="col c-55 right-aligned user-buttons no-padding-left" role="list">
+                <a id="qa-extracts" class="with-tooltip top-button button grey " href="/trademarks/search/extracts">
+                  <span role="listitem">
+                    <svg class="font-awesome-icon" style="width: 1rem; height: 1rem;">
+                      <use xlink:href="#fa-star-solid"></use>
+                    </svg>
+                    My list (<span id="extract-record-count" class="">0</span>)</span
+                  >
+                  <span id="extractMessageBubble" class="tooltip bottom" role="alert">Added to your list.</span>
+                  <span id="unExtractMessageBubble" class="tooltip bottom" role="alert">Removed from your list.</span>
+                </a>
+                <a id="qa-searchListLink" class="with-tooltip top-button button grey active" href="/trademarks/search/records">
+                  <span role="listitem">
+                    <i aria-hidden="true" class="icon icon-list"></i> My searches (<span id="extract-searches-count" class="">1</span>)</span>
+                  <span id="searchMessageBubble" class="tooltip bottom" role="alert">Saved to your searches.</span>
+                </a>
+                <a class="top-button button grey" href="/trademarks/search/quick">
+                  <span role="listitem"><i aria-hidden="true" class="ipa-icon search-t"></i> Quick search</span>
+                </a>
+                <div class="dropdown-holder qa-account-dropdown" aria-expanded="false">
+                  <button aria-label="Alerts" aria-expanded="false" class="user-menu grey alerts-button" title="Alerts">
+                    <svg class="font-awesome-icon" style="width: 1rem; height: 1rem;">
+                      <use xlink:href="#fa-bell-solid"></use>
+                    </svg>
+                    <span>2</span>
+                  </button>
+                  <div class="top-bar-dropdnown-menu dropdown-menu">
+                    <div class="content">
+                      <div class="notification">
+                        <span class="left">
+                          <i aria-hidden="true" class="icon icon-info"></i>
+                        </span>
+                        <span class="right">
+                          You are currently working in an unsaved search space.
+                        </span>
+                      </div>
+                      <div class="notification">
+                        <span class="left">
+                          <i aria-hidden="true" class="icon icon-info"></i>
+                        </span>
+                        <span class="right">
+                          IP Australia's trade mark systems have recently been
+                          upgraded. For more information:
+                          <a href="https://www.ipaustralia.gov.au/about-us/about-this-site/system-availability/rio-release" target="_blank" style="color: #3878a3;">click here</a>.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-holder qa-account-dropdown" aria-expanded="false">
+                  <button aria-label="Menu" aria-expanded="false" class="user-menu qa-space-button grey" title="Menu">
+                    <i aria-hidden="true" class="icon icon-menu"></i>
+                    <i aria-hidden="true" class="icon icon-circle-down"></i>
+                  </button>
+                  <div class="top-bar-dropdnown-menu dropdown-menu">
+                    <div class="content">
+                      <button ng-click="vm.customReport()" id="qa-custome-report" class="dropdown-button qa-report-button">
+                        <svg class="font-awesome-icon">
+                          <use xlink:href="#fa-download"></use>
+                        </svg>
+                        Download search report
+                      </button>
+                      <button ng-click="vm.saveLoad(null, 'SAVE')" id="qa-save-session" class="dropdown-button">
+                        <svg class="font-awesome-icon">
+                          <use xlink:href="#fa-save"></use>
+                        </svg>
+                        Save current space
+                      </button>
+                      <button ng-click="vm.saveLoad(null, 'LOAD')" id="qa-open-session" class="dropdown-button">
+                        <svg class="font-awesome-icon">
+                          <use xlink:href="#fa-sign-in"></use>
+                        </svg>
+                        Open existing space
+                      </button>
+                      <div class="sub-menu-holder">
+                        <button href="#" ng-if="vm.recentSpaces.length > 0" aria-expanded="false" class="dropdown-button sub-dropdown">
+                          <svg class="font-awesome-icon">
+                            <use xlink:href="#fa-calendar"></use>
+                          </svg>
+                          View recent spaces
+                        </button>
+                        <div class="sub-menu left" ng-if="vm.recentSpaces.length > 0">
+                          <button ng-repeat="s in vm.recentSpaces" ng-click="vm.saveLoad(null, 'LOAD', s.t)">
+                            <span>{{ '{{ s.t }}' }}</span>
+                            <span>{{ '{{ s.d | date: "dd MMM yyyy, hh:mm" }}' }}</span>
+                          </button>
+                        </div>
+                      </div>
+                      <button ng-click="vm.deleteSearchSpace('/trademarks/search', true)" class="delete dropdown-button" id="qa-close-session">
+                        <svg class="font-awesome-icon">
+                          <use xlink:href="#fa-times-circle"></use>
+                        </svg>
+                        Clear current space
+                      </button>
+                      <button id="qa-preferences" class="dropdown-button" ng-click="vm.editPreferences()">
+                        <svg class="font-awesome-icon">
+                          <use xlink:href="#fa-cog"></use>
+                        </svg>
+                        User preferences
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="invisibleDiv"></div>
+        <div class="row cf fix-max-width">
+          <div id="floatingTop" style="margin-left:1200px;">
+            <a tabindex="-1" href="#" onclick="event.preventDefault(); event.stopPropagation(); window.location.hash='#top';">
+              <svg class="font-awesome-icon">
+                <use xlink:href="#fa-caret-circle-up"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="col c-100 print-only">
+            <h4>My Searches</h4>
+          </div>
+          <aside class="col c-20 no-padding no-print">
+            <div class="row cf">
+              <div class="col c-100">
+                <div class="results-count">
+                  <h2 class="number qa-count">1</h2>
+                  <br />searches
+                </div>
+              </div>
+            </div>
+            <div class="aside-groups">
+              <div class="group">
+                <span class="title">Combine search lines</span>
+                <div id="annotation-filter" class="content">
+                  <div class="row cf">
+                    <div class="col c-50 no-padding search-number-left">
+                      <input aria-label="Combine search lines - Type first search line number" type="text" name="search_a" placeholder="Search #"
+                        ng-class="{'with-error': vm.hasComboError[0]}" ng-model="vm.combinationIndex[0]" ng-change="vm.comboIdChange('left')"/>
+                    </div>
+                    <div class="col c-50 no-padding search-number-right">
+                      <input aria-label="Combine search lines - Type second search line number" type="text" name="search_b" placeholder="Search #"
+                        ng-class="{'with-error': vm.hasComboError[1]}" ng-model="vm.combinationIndex[1]" ng-change="vm.comboIdChange('right')" />
+                    </div>
+                  </div>
+                  <div ng-cloak ng-if="vm.combinationIndex[0] && vm.combinationIndex[1] && !vm.hasComboError[0] && !vm.hasComboError[1]">
+                    <ul class="filter" style="padding-top:10px">
+                      <li class="qa-combo-AND">
+                        <input id="combo-radio-AND" type="radio" name="combo-radio" value="AND" aria-label="{{ '{{ vm.combinationIndex[0] }}' }} AND {{ '{{ vm.combinationIndex[1] }}' }}" class="sr-only" ng-model="vm.combinationOp"/>
+                        <label for="combo-radio-AND" tabindex="0">
+                          {{ '{{ vm.combinationIndex[0] }}' }} AND
+                          {{ '{{ vm.combinationIndex[1] }}' }}&nbsp;
+                          <span class="count qa-count">
+                              {{ '{{ vm.combinationCount.AND | number }}' }}
+                            results</span>
+                        </label>
+                      </li>
+                      <li class="qa-combo-OR">
+                        <input id="combo-radio-OR" type="radio" name="combo-radio" value="OR" aria-label="{{ '{{ vm.combinationIndex[0] }}' }} OR {{ '{{ vm.combinationIndex[1] }}' }}" class="sr-only" ng-model="vm.combinationOp" />
+                        <label for="combo-radio-OR" tabindex="0">
+                          {{ '{{ vm.combinationIndex[0] }}' }} OR
+                          {{ '{{ vm.combinationIndex[1] }}' }}&nbsp;
+                          <span class="count qa-count">{{ '{{ vm.combinationCount.OR | number }}' }} results</span>
+                        </label>
+                      </li>
+                      <li class="qa-combo-AND_NOT">
+                        <input id="combo-radio-AND_NOT" type="radio" name="combo-radio" value="AND_NOT"
+                               aria-label="{{ '{{ vm.combinationIndex[0] }}' }}  NOT {{ '{{ vm.combinationIndex[1] }}' }}" class="sr-only" ng-model="vm.combinationOp"/>
+                        <label for="combo-radio-AND_NOT" tabindex="0">
+                          {{ '{{ vm.combinationIndex[0] }} '}} NOT
+                          {{ '{{ vm.combinationIndex[1] }}' }}&nbsp;
+                          <span class="count qa-count">{{ '{{ vm.combinationCount.AND_NOT | number }}' }} results</span>
+                        </label>
+                      </li>
+                      <li class="qa-combo-NOT_AND">
+                        <input id="combo-radio-NOT_AND" type="radio" name="combo-radio" value="NOT_AND"
+                               aria-label="{{ '{{ vm.combinationIndex[1] }}' }} NOT {{ '{{ vm.combinationIndex[0] }}' }}" class="sr-only" ng-model="vm.combinationOp"/>
+                        <label for="combo-radio-NOT_AND" tabindex="0">
+                          {{ '{{ vm.combinationIndex[1] }}' }} NOT
+                          {{ '{{ vm.combinationIndex[0] }}' }}&nbsp;
+                          <span class="count qa-count">{{ '{{ vm.combinationCount.NOT_AND | number }}' }} results</span>
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="combo-buttons">
+                      <button title="Save combination search" ng-click="vm.saveCombine($event)" ng-disabled="vm.combinationOp == undefined" class="button green fill qa-combo-save">
+                        <i aria-hidden="true" class="ipa-icon save-t"></i> Save
+                      </button>
+                      <button title="Run combination search" ng-click="vm.combine($event)" ng-disabled="!vm.comboValidate()" class="button green fill qa-combo-search">
+                        <i aria-hidden="true" class="ipa-icon search-t"></i>
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <div class="col c-80 print-100">
+            <div class="row cf search-space-message no-print">
+              <div class="col c-100 no-padding">
+                <div class="row cf fix-max-width"></div>
+              </div>
+            </div>
+            <div class="pagination-buttons left">
+              <a  href="#" title="Reruns all searches and updates their results and count" ng-click="vm.rerunAll($event)" class="button green fill">
+                <svg class="font-awesome-icon">
+                  <use xlink:href="#fa-recycle"></use>
+                </svg>
+                Rerun all searches
+              </a>
+              <a href="#" title="Display summary of this page" onclick="window.open('/trademarks/search/records/summary')" class="button green fill" >
+                <svg class="font-awesome-icon">
+                  <use xlink:href="#fa-external-link"></use>
+                </svg>
+                View summary
+              </a>
+            </div>
+            <div id="qa-searchList">
+              <div class="row cf fix-max-width no-print">
+                <div class="col c-100 no-padding">
+                  &nbsp;
+                </div>
+              </div>
+            </div>
+            <div class="row cf fix-max-width">
+              <div class="col c-100 no-padding">
+                <table class="col c-100 fetch-table records-table">
+                  <thead>
+                    <tr>
+                      <th class="col c-5"></th>
+                      <th class="col c-10">
+                        <span class="title">Results</span>
+                      </th>
+                      <th class="col c-55 query-params">
+                        <span class="title">Search criteria</span>
+                      </th>
+                      <th class="col c-15">
+                        <span class="title small">Class</span>
+                      </th>
+                      <th class="col c-10">
+                        <span class="title small">Status</span>
+                      </th>
+                      <th class="col c-5 no-print">
+                        <span class="title">Combine</span>
+                      </th>
+                      <th class="col c-10 no-print">
+                        <span class="title">Actions</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="_searchLine_8ebe5594-8ce4-4738-ae11-f605c2b88be4" class="anchor"></tbody>
+                  <tbody id="searchLine_8ebe5594-8ce4-4738-ae11-f605c2b88be4">
+                    <tr class="single-line search-record swap-color" data-qa-searchid="8ebe5594-8ce4-4738-ae11-f605c2b88be4" ng-click="vm.search('search_8ebe5594-8ce4-4738-ae11-f605c2b88be4_run', $event, '8ebe5594-8ce4-4738-ae11-f605c2b88be4')" ng-keydown="vm.keyDown('8ebe5594-8ce4-4738-ae11-f605c2b88be4', $event, 0)">
+                      <td class="col c-5 table-index ">1</td>
+                      <td class="col c-10 "><b>2,052</b></td>
+                      <td class="col query-params c-55 " ng-mousedown="vm.mouseDown($event)">
+                        <dl class="search-description-list">
+                          <dt>Word</dt>
+                          <dd>test (Part)</dd>
+                        </dl>
+                      </td>
+                      <td class="col c-15">
+                        <dl class="search-description-list">
+                          <dd>All</dd>
+                        </dl>
+                      </td>
+                      <td class="col c-10">
+                        <dl class="search-description-list">
+                          <dd>All</dd>
+                        </dl>
+                      </td>
+                      <td class="col c-5 center-align combine-search no-print" onclick="event.stopImmediatePropagation();">
+                        <label class="fetch-checkbox" for="selectSearch_8ebe5594-8ce4-4738-ae11-f605c2b88be4" role="button">
+                          <input type="checkbox" id="selectSearch_8ebe5594-8ce4-4738-ae11-f605c2b88be4" value="8ebe5594-8ce4-4738-ae11-f605c2b88be4" tabindex="-1" ng-change="vm.checkToCombine(0)" ng-model="vm.records[0].combineTicked"/>
+                          <div class="qa-combine fetch-checkbox-indicator"></div>
+                        </label>
+                      </td>
+                      <td class="col c-5 no-padding center-align no-print search-actions" onclick="event.stopImmediatePropagation();">
+                        <a
+                          href="/trademarks/search/advanced?attorney=&amp;c=&amp;classList=&amp;ct=A&amp;dateType=LODGEMENT_DATE&amp;endo=&amp;fromDate=&amp;gsd=&amp;i=&amp;ia=&amp;idList=&amp;ieOp%5B0%5D=AND&amp;ieOp%5B1%5D=AND&amp;ir=&amp;irOp=AND&amp;it%5B0%5D=PART&amp;it%5B1%5D=PART&amp;it%5B2%5D=PART&amp;it%5B3%5D=PART&amp;iv%5B0%5D=&amp;iv%5B1%5D=&amp;iv%5B2%5D=&amp;iv%5B3%5D=&amp;nameField%5B0%5D=OWNER&amp;name%5B0%5D=&amp;oAcn=&amp;originalSegment=&amp;publicationFromDate=&amp;publicationToDate=&amp;status=&amp;toDate=&amp;weOp%5B0%5D=AND&amp;weOp%5B1%5D=AND&amp;wp=&amp;wrOp=AND&amp;wt%5B0%5D=PART&amp;wt%5B1%5D=PART&amp;wt%5B2%5D=PART&amp;wt%5B3%5D=PART&amp;wv%5B0%5D=test&amp;wv%5B1%5D=&amp;wv%5B2%5D=&amp;wv%5B3%5D="
+                          title="Refine search"
+                          class="edit-search-btn button square green fill">
+                          <span class="sr-only">Refine search</span>
+                          <svg class="font-awesome-icon">
+                            <use xlink:href="#fa-pencil"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="trash-search-btn button square red no-fill" title="Delete search" ng-click="vm.superDelete('8ebe5594-8ce4-4738-ae11-f605c2b88be4', $event);">
+                          <span class="sr-only">Delete search</span>
+                          <svg class="font-awesome-icon">
+                            <use xlink:href="#fa-trash"></use>
+                          </svg>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="qa-searchList no-print">
+              <div class="row cf fix-max-width">
+                <div class="col c-100">
+                  <div class="pagination-buttons left">&nbsp;</div>
+                  <div class="pagination-count">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="application/javascript">
+          addToVars({
+            records: [
+              {
+                id: "8ebe5594-8ce4-4738-ae11-f605c2b88be4",
+                count: 2052,
+                query:
+                  "attorney=\u0026c=\u0026classList=\u0026ct=A\u0026dateType=LODGEMENT_DATE\u0026endo=\u0026fromDate=\u0026gsd=\u0026i=\u0026ia=\u0026idList=\u0026ieOp%5B0%5D=AND\u0026ieOp%5B1%5D=AND\u0026ir=\u0026irOp=AND\u0026it%5B0%5D=PART\u0026it%5B1%5D=PART\u0026it%5B2%5D=PART\u0026it%5B3%5D=PART\u0026iv%5B0%5D=\u0026iv%5B1%5D=\u0026iv%5B2%5D=\u0026iv%5B3%5D=\u0026nameField%5B0%5D=OWNER\u0026name%5B0%5D=\u0026oAcn=\u0026originalSegment=\u0026publicationFromDate=\u0026publicationToDate=\u0026status=\u0026toDate=\u0026weOp%5B0%5D=AND\u0026weOp%5B1%5D=AND\u0026wp=\u0026wrOp=AND\u0026wt%5B0%5D=PART\u0026wt%5B1%5D=PART\u0026wt%5B2%5D=PART\u0026wt%5B3%5D=PART\u0026wv%5B0%5D=test\u0026wv%5B1%5D=\u0026wv%5B2%5D=\u0026wv%5B3%5D=",
+                comboLeft: null,
+                comboOperation: null,
+                comboRight: null,
+                searchImageRecord: null,
+                created: "20190315",
+                updated: null,
+                comboRightQuery: null,
+                combination: false
+              }
+            ],
+            hasOldStatus: false
+          });
+        </script>
+      </div>
+    </div>
+    <footer class="no-print floating">
+      <div class="row cf fix-max-width">
+        <div class="col c-100" role="list">
+          <a href="/trademarks/help" target="_blank">
+            <span role="listitem">Help</span>
+          </a>
+          <a href="/trademarks/about" target="_blank">
+            <span role="listitem">About</span>
+          </a>
+          <a href="/trademarks/journals" target="_blank">
+            <span role="listitem">Journals</span>
+          </a>
+          <a href="https://www.ipaustralia.gov.au/about-us/contact-us-form" target="_blank">
+            <span role="listitem">Feedback</span>
+          </a>
+          <a href="/trademarks/disclaimer" target="_blank">
+            <span role="listitem">Disclaimer</span>
+          </a>
+          <a href="http://pericles.ipaustralia.gov.au/tmgns/facelets/tmgoods.xhtml" title="Goods and Services" target="_blank">
+            <span role="listitem">Goods and Services</span>
+          </a>
+          <a href="http://pericles.ipaustralia.gov.au/atmoss/Falcon_Search_tools.Options" title="Other search tools" target="_blank">
+            <span role="listitem">Other search tools</span>
+          </a>
+          <a href="#" onclick="event.preventDefault(); document.cookie='_fullMobile=; path=/'; window.location.href='/trademarks/mobile';">
+            <span role="listitem">Mobile version</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="text/ng-template" id="templateSessionClose">
+      <h1 class="red">{{ '{{title}}' }}</h1>
+      <div class="content">
+      <p>{{ '{{message}}' }}</p>
+      <form action="/trademarks/search/context-delete" method="post" ng-submit="doit()">
+      <input type="hidden" name="_csrf" value="f1bedb9f-8da3-4d21-9a0d-2f5e15720016"/>
+      <p class="center-align">
+      <a href="#" class="button grey fill" ng-click="dont()">Cancel</a>
+      <button type="submit" class="button red fill">{{ '{{delete_action}}' }}</button>
+      </p>
+      </form>
+      </div>
+    </script>
+    <script type="application/javascript">
+      addToVars({
+        baseUrl: "/trademarks/search",
+        baseTemplateUrl: "/trademarks",
+        isGuest: true,
+        userPreferences: {
+          pageSize: 250,
+          fields: ["words", "image", "ir", "status_lower", "class", "status"],
+          reportFields: ["searches", "groups", "details", "mylist"],
+          preferredSearch: "ADVANCED",
+          handedness: "RIGHT",
+          frozenSearch: null,
+          privatePreferences: false
+        },
+        extractCount: 0,
+        sessionName: "_guest_91E41C0807C913BB0174409BB99759F0",
+        hasContext: true
+      });
+      r("/trademarks");
+    </script>
+    <script>
+      window.ga =
+        window.ga ||
+        function() {
+          (ga.q = ga.q || []).push(arguments);
+        };
+      ga.l = +new Date();
+      ga("create", "UA-82196721-1", "auto");
+      ga("send", "pageview");
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </body>
+</html>
