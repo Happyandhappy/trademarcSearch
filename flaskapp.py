@@ -43,55 +43,7 @@ def scrap(url, Count):
     data['_csrf'] = _csrf
     for name in names:
         data[name] = getVal(querydata, name)
-    """
-    data = {
-        '_csrf'     : _csrf,
-        'wv[0]'     : getVal(querydata,'wv[0]'),
-        'wt[0]'     : getVal(querydata,'wt[0]'),
-        'weOp[0]'   : getVal(querydata,'weOp[0]'),
-        'wv[1]'     : getVal(querydata,'wv[1]'),
-        'wt[1]'     : getVal(querydata,'wt[1]'),
-        'wrOp'      : getVal(querydata,'wrOp'),
-        'wv[2]'     : getVal(querydata,'wv[2]'),
-        'wt[2]'     : getVal(querydata,'wt[2]'),
-        'weOp[1]'   : getVal(querydata,'weOp[1]'),
-        'wv[3]'     : getVal(querydata,'wv[3]'),
-        'wt[3]'     : getVal(querydata,'wt[3]'),
-        'iv[0]'     : getVal(querydata,'iv[0]'),
-        'it[0]'     : getVal(querydata,'it[0]'),
-        'ieOp[0]'   : getVal(querydata,'ieOp[0]'),
-        'iv[1]'     : getVal(querydata,'iv[1]'),
-        'it[1]'     : getVal(querydata,'it[1]'),
-        'irOp'      : getVal(querydata,'irOp'),
-        'iv[2]'     : getVal(querydata,'iv[2]'),
-        'it[2]'     : getVal(querydata,'it[2]'),
-        'ieOp[1]'   : getVal(querydata,'ieOp[1]'),
-        'iv[3]'     : getVal(querydata,'iv[3]'),
-        'it[3]'     : getVal(querydata,'it[3]'),
-        'wp'        : getVal(querydata,'wp'),
-        '_sw'       : getVal(querydata,'_sw'),
-        'classList' : getVal(querydata,'classList'),
-        'ct'        : getVal(querydata,'ct'),
-        'status'    : getVal(querydata,'status'),
-        'dateType'  : getVal(querydata,'dateType'),
-        'fromDate'  : getVal(querydata,'fromDate'),
-        'toDate'    : getVal(querydata,'toDate'),
-        'ia'        : getVal(querydata,'ia'),
-        'gsd'       : getVal(querydata,'gsd'),
-        'endo'      : getVal(querydata,'endo'),
-        'nameField[0]': getVal(querydata,'nameField[0]'),
-        'name[0]'   : getVal(querydata,'name[0]'),
-        'attorney'  : getVal(querydata,'attorney'),
-        'oAcn'      : getVal(querydata,'oAcn'),
-        'idList'    : getVal(querydata,'idList'),
-        'ir'        : getVal(querydata,'ir'),
-        'publicationFromDate': getVal(querydata,'publicationFromDate'),
-        'publicationToDate'  : getVal(querydata,'publicationToDate'),
-        'i' : getVal(querydata,'i'),
-        'c' : getVal(querydata,'c'),
-        'originalSegment' : getVal(querydata,'originalSegment')
-    }
-    """
+
     rest = sess.post(url='https://search.ipaustralia.gov.au/trademarks/search/doSearch', data=data)
     tradeMarkIds = getTrademarksfromHtml(rest.text)
     URL = rest.url

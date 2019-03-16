@@ -93,3 +93,9 @@
         white-space: -o-pre-wrap;   /* Opera 7 */
         word-wrap: break-word;      /* IE */
     }
+
+    #debugbox_button{
+        margin-top: 10px;
+        width: 100%;
+        height: 36px;
+    }

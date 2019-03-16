@@ -195,9 +195,9 @@
                                     list.</span>
                             </a>
                             <a id="qa-searchListLink" class="with-tooltip top-button button grey "
-                                href="/trademarks/search/records">
+                                href="/mysearch">
                                 <span role="listitem"><i aria-hidden="true" class="icon icon-list"></i> My searches
-                                    (<span id="extract-searches-count" class="">3</span>)</span>
+                                    (<span id="extract-searches-count" class="">0</span>)</span>
                                 <span id="searchMessageBubble" class="tooltip bottom" role="alert">Saved to your
                                     searches.</span>
                             </a>
@@ -1724,30 +1724,32 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-line-group" id="formLine13">
-                                        <div class="col c-100 form-line label">
-                                            <div class="col c-100 no-padding">
-                                                <a class="wordwrap" for="trademarkIds" aria-hidden="true" id="resultUrl" target="_blank">
-                                                    https://search.ipaustralia.gov.au/trademarks/search/advanced?attorney=&c=&classList=&ct=A&dateType=LODGEMENT_DATE&endo=&fromDate=&gsd=&i=&ia=&idList=&ieOp[0]=AND&ieOp[1]=AND&ir=&irOp=AND&it[0]=PART&it[1]=PART&it[2]=PART&it[3]=PART&iv[0]=&iv[1]=&iv[2]=&iv[3]=&nameField[0]=OWNER&name[0]=&oAcn=&originalSegment=&publicationFromDate=&publicationToDate=&status=&toDate=&weOp[0]=AND&weOp[1]=AND&wp=&wrOp=AND&wt[0]=PART&wt[1]=PART&wt[2]=PART&wt[3]=PART&wv[0]=STRING&wv[1]=&wv[2]=&wv[3]=
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-line-group" id="formLine14">
-                                        <div class="col c-100 form-line label">
-                                            <div class="col c-100 no-padding">
-                                                <div class="wordwrap" for="trademarkIds" aria-hidden="true" id="Count">result : 0
+                                    <div id="debugbox">
+                                        <div class="form-line-group" id="formLine13">
+                                            <div class="col c-100 form-line label">
+                                                <div class="col c-100 no-padding">
+                                                    <a class="wordwrap" for="trademarkIds" aria-hidden="true" id="resultUrl" target="_blank">
+                                                        https://search.ipaustralia.gov.au/trademarks/search/advanced?attorney=&c=&classList=&ct=A&dateType=LODGEMENT_DATE&endo=&fromDate=&gsd=&i=&ia=&idList=&ieOp[0]=AND&ieOp[1]=AND&ir=&irOp=AND&it[0]=PART&it[1]=PART&it[2]=PART&it[3]=PART&iv[0]=&iv[1]=&iv[2]=&iv[3]=&nameField[0]=OWNER&name[0]=&oAcn=&originalSegment=&publicationFromDate=&publicationToDate=&status=&toDate=&weOp[0]=AND&weOp[1]=AND&wp=&wrOp=AND&wt[0]=PART&wt[1]=PART&wt[2]=PART&wt[3]=PART&wv[0]=STRING&wv[1]=&wv[2]=&wv[3]=
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-line-group" id="formLine15">
+                                        <div class="form-line-group" id="formLine14">
+                                            <div class="col c-100 form-line label">
+                                                <div class="col c-100 no-padding">
+                                                    <div class="wordwrap" for="trademarkIds" aria-hidden="true" id="Count">result : 0
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-line-group" id="formLine15">
                                         <div class="col c-100 form-line label">
                                             <div class="col c-100 no-padding">
                                                 <div class="wordwrap" for="trademarkIds" aria-hidden="true" id="TradeIds">
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -1793,6 +1795,12 @@
                                             aria-label="Clear search form" class="button red no-fill"
                                             ng-click="vm.clearSearchForm()">
                                             <i class="ipa-icon cross-t"></i> <span>Clear</span>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button id="debugbox_button" type="button" class="button red no-fill" title="Debug">
+                                            <i aria-hidden="true" class="icon icon-list"></i>
+                                            <span>Debug</span>
                                         </button>
                                     </div>
                                     <div ng-if="!vm.notChangedDefault()" class="freeze"
